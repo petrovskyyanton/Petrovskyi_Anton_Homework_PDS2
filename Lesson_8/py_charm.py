@@ -6,3 +6,8 @@ def mane_function(x):
     list_of_smth = [dictionary, 1234, None, f'String with {x}']
 def test_function(y):
     t = int(input('Number:'))
+    a = t//10
+    print(f'String with {y} and {a}')
+
+
+print(test_function(1), mane_function(1))
