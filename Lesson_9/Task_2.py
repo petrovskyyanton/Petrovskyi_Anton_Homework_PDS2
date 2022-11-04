@@ -3,7 +3,7 @@ class TextProcessor:
         self._punctuation = '.,!?;:*'
 
     def __is_punctuation(self, sign):
-       return sign in self._punctuation
+        return sign in self._punctuation
 
     def get_clean_string(self, text):
         clean_text = ''
