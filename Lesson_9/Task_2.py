@@ -17,15 +17,11 @@ class TextProcessor:
 class TextLoader:
     def __init__(self, __text_processor, __clean_string):
         self.__text_processor = __text_processor
-        a = input("Text")
-        __text_processor = TextProcessor(a)
+        __text_processor = TextProcessor()
+
     def set_clean_text(self):
-        clean_string = self.__text_processor.get_clean_string()
-        return clean_string
+        __clean_string = self.__text_processor.get_clean_string()
 
     @property
-    def clean_string(self):
-        return clean_string
-
-
-
+    def __clean_string(self):
+        return f'This text is cleaned from signs of punctuations:\n{self.__clean_string}'
