@@ -15,41 +15,35 @@ class TextProcessor:
 
 
 class TextLoader:
-    def __init__(self, text_processor, clean_string=''):
-        self.__text_processor = text_processor
-        self.__clean_string = clean_string
+    def __init__(self):
+        self.__text_processor = TextProcessor()
+        self.__clean_string = None
 
-    @property
-    def text_processor(self):
-        return self.__text_processor
-
-    def set_clean_text(self, text):
-        self.clean_string = self.text_processor.get_clean_string(text)
+    def set_clean_string(self, text):
+        self.__clean_string = self.__text_processor.get_clean_string(text)
 
     @property
     def clean_string(self):
+        print(f'This text is cleaned from signs of punctuations:\n{self.__clean_string}')
         return self.__clean_string
-        # f'This text is cleaned from signs of punctuations:\n{self.__clean_string}'
 
-    @clean_string.setter
-    def clean_string(self, text):
-        self.__clean_string = self.text_processor.get_clean_string(text)
+class DataInterface:
+    def __init__(self):
+        self._text_loader = TextLoader()
 
-
-# class DataInterface:
-#     def __init__(self, text_processor):
-#         self._text_processor = text_processor
-#
-#     def process_texts(self, list_of_strings):
-#         for i in list_of_strings:
-#             print(i)
+    def process_texts(self, text):
+        list_of_strings = text.split(r'\n')
+        for i in list_of_strings:
+            print(i)
 
 
 t = input('Text:')
 q = TextProcessor()
-r = TextLoader(q)
+r = TextLoader()
+g = DataInterface()
 print(q.get_clean_string(t))
-print(r.set_clean_text(t))
-print(r.set_clean_text(t))
-r.clean_string() # str object not callable
+r.set_clean_string(t)
+print(r.clean_string)
+print(g.process_texts(t))
+
 
