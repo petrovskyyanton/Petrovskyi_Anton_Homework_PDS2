@@ -9,10 +9,16 @@ class Parallelogram:
 
 
 class Square(Parallelogram):
-    def __init__(self, width, length):
-        Parallelogram.__init__(self, width, length)
+    def __init__(self, width):
+        Parallelogram.__init__(self, width, length=None)
         self.width = width
 
     def get_area(self):
         s = self.width ** 2
         return f"Площа квадрату: {s}"
+
+
+A = Parallelogram(10, 15)
+B = Square(10)
+print(A.get_area())
+print(B.get_area())
