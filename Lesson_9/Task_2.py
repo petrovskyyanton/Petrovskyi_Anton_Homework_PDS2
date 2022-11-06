@@ -24,7 +24,7 @@ class TextLoader:
 
     @property
     def clean_string(self):
-        print(f'This text is cleaned from signs of punctuations:\n{self.__clean_string}')
+        print(f'This text is cleaned from signs of punctuations:')
         return self.__clean_string
 
 
