@@ -27,12 +27,14 @@ class TextLoader:
         print(f'This text is cleaned from signs of punctuations:\n{self.__clean_string}')
         return self.__clean_string
 
+
 class DataInterface:
     def __init__(self):
         self._text_loader = TextLoader()
 
     def process_texts(self, text):
-        list_of_strings = text.split(r'\n')
+        self._text_loader.set_clean_string(text)
+        list_of_strings = self._text_loader.clean_string.split(r'\n')
         for i in list_of_strings:
             print(i)
 
@@ -41,9 +43,4 @@ t = input('Text:')
 q = TextProcessor()
 r = TextLoader()
 g = DataInterface()
-print(q.get_clean_string(t))
-r.set_clean_string(t)
-print(r.clean_string)
 print(g.process_texts(t))
-
-
