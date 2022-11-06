@@ -1,6 +1,6 @@
 class TextProcessor:
     def __init__(self):
-        self._punctuation = '!"#$%&\'()*+,-./:;<=>?@[]^_`{|}~'
+        self._punctuation = """!"#$%&'()*+,-./:;<=>?@[]^_`{|}~"""
 
     def __is_punctuation(self, sign):
         return sign in self._punctuation
