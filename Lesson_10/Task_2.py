@@ -1,4 +1,3 @@
-import sys
 list_of_smth = [1, 3.0, '3.0', 4, 5, 6, 7, 8, 9]
 
 
