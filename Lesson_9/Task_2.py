@@ -39,9 +39,10 @@ class DataInterface:
             return i
 
 
-t = '''First, line \n
-Second. line\n
-Third! line'''
+t = '''First, line
+Second.{}()[]} line:
+Third!- line
+End- of +example'''
 
 q = TextProcessor()
 r = TextLoader()
