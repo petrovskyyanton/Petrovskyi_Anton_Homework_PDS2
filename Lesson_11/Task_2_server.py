@@ -9,10 +9,12 @@ while True:
     print('connected:', addr)
     data = conn.recv(1024)
     print(str(data))
-    dict_of_answer = {b'Hello!': 'Hi!', b'How are you?': 'I am fine, because I am just a server!',
-                      b'What are you doing now?': 'I am computing smth...'}
-    if data in dict_of_answer.keys():
-        message = dict_of_answer[data]
+    s = str(data)[2:-1]
+    dict_of_answer = {'Hello!': 'Hi!', 'How are you?': 'I am fine, because I am just a server!',
+                      'What are you doing now?': 'I am computing smth...',
+                      'Goodbye': 'See you later'}
+    if s in dict_of_answer.keys():
+        message = dict_of_answer[s]
     else:
         message = input('Enter message')
     conn.send(bytes(message, encoding='UTF-8'))
