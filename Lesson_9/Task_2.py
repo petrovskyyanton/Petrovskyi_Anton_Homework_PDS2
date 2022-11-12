@@ -36,10 +36,13 @@ class DataInterface:
         self._text_loader.set_clean_string(text)
         list_of_strings = self._text_loader.clean_string.split(r'\n')
         for i in list_of_strings:
-            print(i)
+            return i
 
 
-t = input('Text:')
+t = '''First, line \n
+Second. line\n
+Third! line'''
+
 q = TextProcessor()
 r = TextLoader()
 g = DataInterface()
