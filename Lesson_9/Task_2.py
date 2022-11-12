@@ -39,10 +39,10 @@ class DataInterface:
             return i
 
 
-t = '''First, line
-Second.{}()[]} line:
-Third!- line
-End- of +example'''
+t = '''First,];<=>? line
+Second.{}()[ line:
+Third!-*+ line
+End- of +#$%&example'''
 
 q = TextProcessor()
 r = TextLoader()
