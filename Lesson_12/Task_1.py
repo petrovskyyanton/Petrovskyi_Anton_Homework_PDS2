@@ -18,7 +18,7 @@ result = {}
 with concurrent.futures.ProcessPoolExecutor() as executor:
     started_at = time.time()
     for number, fact in zip(numbers_for_factorials, executor.map(factorial, numbers_for_factorials)):
-        print(f'{number} factorial is: {fact}')
+        print(f'The {number} factorial is: {fact}')
     t1 = time.time() - started_at
     result['ProcessPoolExecutor'] = t1
     print(f'Time in ProcessPoolExecutor: {t1}')
@@ -35,7 +35,7 @@ with concurrent.futures.ThreadPoolExecutor(max_workers=5) as executor:
         except Exception as exc:
             print(f'{exc}')
         else:
-            print(f'{number} factorial is:{data}')
+            print(f'The {number} factorial is:{data}')
     t2 = time.time() - started_at
     result['ThreadPoolExecutor'] = t2
     print(f'Time in ThreadPoolExecutor: {t2}')
