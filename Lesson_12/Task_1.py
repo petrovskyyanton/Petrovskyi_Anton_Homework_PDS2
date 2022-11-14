@@ -29,13 +29,13 @@ with concurrent.futures.ThreadPoolExecutor(max_workers=5) as executor:
     started_at = time.time()
     f = {executor.submit(factorial, number): number for number in numbers_for_factorials}
     for future in concurrent.futures.as_completed(f):
-        url = f[future]
+        number = f[future]
         try:
             data = future.result()
         except Exception as exc:
             print(f'{exc}')
         else:
-            print(f'{data}')
+            print(f'{number} factorial is:{data}')
     t2 = time.time() - started_at
     result['ThreadPoolExecutor'] = t2
     print(f'Time in ThreadPoolExecutor: {t2}')
