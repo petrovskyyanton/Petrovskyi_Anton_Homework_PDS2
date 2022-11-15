@@ -21,21 +21,21 @@ async def handle_client(client):
 async def r1():
     global r1
     r1 = int(s[0]) + int(s[1])
-    await asyncio.sleep(2)
+    await asyncio.sleep(1)
     print(f'A+B={r1}')
 
 
 async def r2():
     global r2
     r2 = int(s[0]) - int(s[1])
-    await asyncio.sleep(2)
+    await asyncio.sleep(1)
     print(f'A-B={r2}')
 
 
 async def r3():
     global r3
     r3 = int(s[0]) * int(s[1])
-    await asyncio.sleep(2)
+    await asyncio.sleep(1)
     print(f'A*B={r3}')
 
 
