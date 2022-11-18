@@ -8,7 +8,7 @@ while True:
     conn, addr = sock.accept()
     print('connected:', addr)
     data = conn.recv(1024)
-    print(str(data))
+    print(str(data.decode()))
     message = input('Enter message:')
     conn.send(bytes(message, encoding='UTF-8'))
 conn.close()
