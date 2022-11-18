@@ -8,8 +8,8 @@ while True:
     conn, addr = sock.accept()
     print('connected:', addr)
     data = conn.recv(1024)
-    print(str(data))
-    s = str(data)[2:-1]
+    print(str(data.decode()))
+    s = str(data.decode())
     dict_of_answer = {'Hello!': 'Hi!', 'How are you?': 'I am fine, because I am just a server!',
                       'What are you doing now?': 'I am computing smth...',
                       'Goodbye': 'See you later'}
