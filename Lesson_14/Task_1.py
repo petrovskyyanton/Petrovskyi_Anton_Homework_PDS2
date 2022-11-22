@@ -8,22 +8,6 @@ class Tree:
     def __str__(self):
         return f'Node {self.id_node}, left {self.left}, right {self.right}'
 
-    # Insert method to create nodes
-    # def insert(self, id_node):
-    #     if self.id_node:
-    #         if id_node < self.id_node:
-    #             if self.left is None:
-    #                 self.left = Tree(id_node)
-    #             else:
-    #                 self.left.insert(id_node)
-    #         elif id_node > self.id_node:
-    #             if self.right is None:
-    #                 self.right = Tree(id_node)
-    #             else:
-    #                 self.right.insert(id_node)
-    #     else:
-    #         self.id_node = id_node
-
     # findval method to compare the id_node with nodes
     def findval(self, find_val):
         if find_val < self.id_node:
