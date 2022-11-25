@@ -111,10 +111,3 @@ print(f'Max value: {example_1.get_max()}, min value: {example_1.get_min()}')
 print(f'Max value: {example_2.get_max()}, min value: {example_2.get_min()}')
 example_1.delete(10)
 print(example_1)
-l = Tree()
-l3 = [50, 25, 75]
-l.insert_from_list([50, 25, 75])
-l.print_tree()
-print(l.left)
-
-
