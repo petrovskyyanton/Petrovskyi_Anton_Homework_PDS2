@@ -1,0 +1,18 @@
+2022-11-27 14:30:47,917 - log_from.Task_1_server_from_Lesson_11 - INFO - Program started
+2022-11-27 14:31:03,433 - log_from.Task_1_server_from_Lesson_11 - INFO - Message "Message 1" is received from client
+2022-11-27 14:31:12,157 - log_from.Task_1_server_from_Lesson_11 - INFO - Message "Message 2" is send from server
+2022-11-27 14:31:40,367 - log_from.Task_1_server_from_Lesson_11 - INFO - Message "Message 2" is received from client
+2022-11-27 14:31:47,161 - log_from.Task_1_server_from_Lesson_11 - INFO - Message "Message 2" is send from server
+2022-11-27 15:22:04,104 - log_from.Task_1_server_from_Lesson_11 - INFO - Program started
+2022-11-27 15:22:11,421 - log_from.Task_1_server_from_Lesson_11 - INFO - Message "Message 3" is received from client
+2022-11-27 15:22:19,047 - log_from.Task_1_server_from_Lesson_11 - INFO - Message "Hello, server" is send from server
+2022-11-27 15:26:06,813 - log_from.Task_1_server_from_Lesson_11 - INFO - Program started
+2022-11-27 15:26:17,299 - log_from.Task_1_server_from_Lesson_11 - INFO - Message "Message from client" is received from client
+2022-11-27 15:26:25,035 - log_from.Task_1_server_from_Lesson_11 - INFO - Message "Message from server" is send from server
+2022-11-27 15:26:46,614 - log_from.Task_1_server_from_Lesson_11 - WARNING - Error detected
+2022-11-27 15:26:46,615 - log_from.Task_1_server_from_Lesson_11 - INFO - Message "Error" is received from client
+2022-11-27 15:26:53,004 - log_from.Task_1_server_from_Lesson_11 - INFO - Message "Error" is send from server
+2022-11-27 15:28:54,052 - log_from.Task_1_server_from_Lesson_11 - INFO - Program started
+2022-11-27 15:29:04,451 - log_from.Task_1_server_from_Lesson_11 - INFO - Message "Warnong" is received from client
+2022-11-27 15:29:22,730 - log_from.Task_1_server_from_Lesson_11 - ERROR - Error detected
+2022-11-27 15:29:22,730 - log_from.Task_1_server_from_Lesson_11 - INFO - Message "Error" is send from server
