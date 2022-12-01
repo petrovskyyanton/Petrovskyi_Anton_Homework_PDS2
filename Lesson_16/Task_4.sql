@@ -1,3 +1,3 @@
 USE pds;
-SELECT MIN(SALARY) FROM pds.employees;
-SELECT MAX(SALARY) FROM pds.employees;
+SELECT MIN(SALARY) FROM employees;
+SELECT MAX(SALARY) FROM employees;

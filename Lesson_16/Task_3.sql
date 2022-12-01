@@ -1,2 +1,2 @@
 USE pds;
-SELECT SUM(SALARY) FROM pds.employees;
+SELECT SUM(SALARY) FROM employees;
