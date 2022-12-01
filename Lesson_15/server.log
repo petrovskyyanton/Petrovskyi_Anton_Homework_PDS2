@@ -16,3 +16,22 @@
 2022-11-27 15:29:04,451 - log_from.Task_1_server_from_Lesson_11 - INFO - Message "Warnong" is received from client
 2022-11-27 15:29:22,730 - log_from.Task_1_server_from_Lesson_11 - ERROR - Error detected
 2022-11-27 15:29:22,730 - log_from.Task_1_server_from_Lesson_11 - INFO - Message "Error" is send from server
+2022-11-30 20:39:38,274 - log_from.Task_1_server_from_Lesson_11 - INFO - Program started
+2022-11-30 20:40:06,713 - log_from.Task_1_server_from_Lesson_11 - INFO - Message "Example" is received from client
+2022-11-30 20:40:10,424 - log_from.Task_1_server_from_Lesson_11 - INFO - Message "Example" is send from server
+2022-11-30 20:59:45,947 - log_from.Task_1_server_from_Lesson_11 - INFO - Program started
+2022-11-30 20:59:46,195 - log_from.Task_1_server_from_Lesson_11 - INFO - Connected to "('127.0.0.1', 53284)"
+2022-11-30 20:59:48,256 - log_from.Task_1_server_from_Lesson_11 - INFO - Message "3rgf" is received from client
+2022-11-30 20:59:50,661 - log_from.Task_1_server_from_Lesson_11 - INFO - Message "r3gr" is send from server
+2022-11-30 21:13:01,412 - log_from.Task_1_server_from_Lesson_11 - INFO - Connected to "('127.0.0.1', 53321)"
+2022-11-30 21:13:05,743 - log_from.Task_1_server_from_Lesson_11 - INFO - Message "12342134" is received from client
+2022-11-30 21:13:08,971 - log_from.Task_1_server_from_Lesson_11 - INFO - Message "q252345234" is send from server
+2022-11-30 21:13:39,432 - log_from.Task_1_server_from_Lesson_11 - INFO - Program started
+2022-11-30 21:13:41,709 - log_from.Task_1_server_from_Lesson_11 - INFO - Connected to ('127.0.0.1', 53322)
+2022-11-30 21:14:27,086 - log_from.Task_1_server_from_Lesson_11 - WARNING - Warning! Something wrong!
+2022-11-30 21:14:27,086 - log_from.Task_1_server_from_Lesson_11 - INFO - Message "Warning" is received from client
+2022-11-30 21:14:30,782 - log_from.Task_1_server_from_Lesson_11 - INFO - Message "Warning" is send from server
+2022-11-30 21:17:24,176 - log_from.Task_1_server_from_Lesson_11 - INFO - Program started
+2022-11-30 21:17:25,461 - log_from.Task_1_server_from_Lesson_11 - INFO - Connected to ('127.0.0.1', 53328)
+2022-11-30 21:17:27,746 - log_from.Task_1_server_from_Lesson_11 - INFO - Message "oqub3yrvoygbu" is received from client
+2022-11-30 21:17:30,612 - log_from.Task_1_server_from_Lesson_11 - INFO - Message "q3bywgviybygvu" is send from server
