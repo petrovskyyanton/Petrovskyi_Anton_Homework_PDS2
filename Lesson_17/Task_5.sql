@@ -1,4 +1,2 @@
 USE pds;
-SET @London_Location_ID = (SELECT LOCATION_ID FROM locations WHERE CITY ='London');
-SET @Department_from_London_ID = (SELECT DEPARTMENT_ID FROM departments WHERE LOCATION_ID = @London_Location_ID);
-SELECT FIRST_NAME, LAST_NAME, DEPARTMENT_ID as Department_ID_from_London FROM employees WHERE DEPARTMENT_ID = @Department_from_London_ID;
+SELECT FIRST_NAME, LAST_NAME, employees.DEPARTMENT_ID FROM locations JOIN departments ON locations.LOCATION_ID = departments.LOCATION_ID JOIN employees ON departments.DEPARTMENT_ID = employees.DEPARTMENT_ID WHERE CITY = 'London';
