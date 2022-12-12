@@ -2,17 +2,74 @@ import numpy as np
 
 
 class Matrix:
-    def __init__(self, *args):
-        self.matrix = np.array(args)
+    def __init__(self, lists):
+        self.lists = lists
+        self.matrix = np.array(lists)
 
     def __str__(self):
         return str(self.matrix)
 
     def add(self, B):
+        if len(self.matrix) < len(B.matrix):
+            dif = len(B.matrix) - len(self.matrix)
+            q = []
+            for i in range(len(self.matrix[0])):
+                q.append(0)
+            for i in range(dif):
+                self.lists.append(q)
+            self.matrix = np.array(self.lists)
+        if len(self.matrix) > len(B.matrix):
+            dif = len(self.matrix) - len(B.matrix)
+            q = []
+            for i in range(len(B.matrix[0])):
+                q.append(0)
+            for i in range(dif):
+                B.lists.append(q)
+            B.matrix = np.array(B.lists)
+        if len(self.matrix[0]) < len(B.matrix[0]):
+            dif = len(B.matrix[0]) - len(self.matrix[0])
+            for w in range(dif):
+                for i in self.lists:
+                    i.append(0)
+            self.matrix = np.array(self.lists)
+        if len(self.matrix[0]) > len(B.matrix[0]):
+            dif = len(self.matrix[0]) - len(B.matrix[0])
+            for w in range(dif):
+                for i in B.lists:
+                    i.append(0)
+            B.matrix = np.array(B.lists)
         C = self.matrix + B.matrix
         return C
 
     def minus(self, B):
+        if len(self.matrix) < len(B.matrix):
+            dif = len(B.matrix) - len(self.matrix)
+            q = []
+            for i in range(len(self.matrix[0])):
+                q.append(0)
+            for i in range(dif):
+                self.lists.append(q)
+            self.matrix = np.array(self.lists)
+        if len(self.matrix) > len(B.matrix):
+            dif = len(self.matrix) - len(B.matrix)
+            q = []
+            for i in range(len(B.matrix[0])):
+                q.append(0)
+            for i in range(dif):
+                B.lists.append(q)
+            B.matrix = np.array(B.lists)
+        if len(self.matrix[0]) < len(B.matrix[0]):
+            dif = len(B.matrix[0]) - len(self.matrix[0])
+            for w in range(dif):
+                for i in self.lists:
+                    i.append(0)
+            self.matrix = np.array(self.lists)
+        if len(self.matrix[0]) > len(B.matrix[0]):
+            dif = len(self.matrix[0]) - len(B.matrix[0])
+            for w in range(dif):
+                for i in B.lists:
+                    i.append(0)
+            B.matrix = np.array(B.lists)
         C = self.matrix - B.matrix
         return C
 
@@ -20,23 +77,36 @@ class Matrix:
         return self.matrix * number
 
     def multiple(self, B):
+        if len(self.matrix[0]) < len(B.matrix):
+            dif = len(B.matrix) - len(self.matrix[0])
+            for w in range(dif):
+                for i in self.lists:
+                    i.append(0)
+            self.matrix = np.array(self.lists)
+        if len(self.matrix[0]) > len(B.matrix):
+            dif = len(self.matrix[0]) - len(B.matrix)
+            q = []
+            for i in range(len(B.matrix[0])):
+                q.append(0)
+            for i in range(dif):
+                B.lists.append(q)
+            B.matrix = np.array(B.lists)
+
         C = self.matrix.dot(B.matrix)
         return C
 
     def transponse(self):
-        return self.matrix.T
+        return self.matrix.transpose()
 
 
-r1 = [1, 2, 3]
-r2 = [3, 4, 5]
-r3 = [5, 6, 7]
+m1 = [[3, 4, 5]]
 
-r4 = [2, 7, 9]
-r5 = [9, 7, 5]
-r6 = [4, 7, 1]
+m2 = [[2, 7],
+      [9, 7]]
 
-m1 = Matrix(r1, r2, r3)
-m2 = Matrix(r4, r5, r6)
+m1 = Matrix(m1)
+m2 = Matrix(m2)
+
 
 print(m1.add(m2))
 print(m2.minus(m1))
