@@ -1,6 +1,16 @@
 import numpy as np
 
 
+class MatrixError(Exception):
+    def __init__(self, *args):
+        if args:
+            self.message = args[0]
+        else:
+            self.message = None
+
+    def __str__(self):
+        return f'Something wrong: {self.message}'
+
 class Matrix:
     def __init__(self, lists):
         self.lists = lists
@@ -77,21 +87,8 @@ class Matrix:
         return self.matrix * number
 
     def multiple(self, B):
-        if len(self.matrix[0]) < len(B.matrix):
-            dif = len(B.matrix) - len(self.matrix[0])
-            for w in range(dif):
-                for i in self.lists:
-                    i.append(0)
-            self.matrix = np.array(self.lists)
-        if len(self.matrix[0]) > len(B.matrix):
-            dif = len(self.matrix[0]) - len(B.matrix)
-            q = []
-            for i in range(len(B.matrix[0])):
-                q.append(0)
-            for i in range(dif):
-                B.lists.append(q)
-            B.matrix = np.array(B.lists)
-
+        if len(self.matrix[0]) != len(B.matrix):
+            raise MatrixError('This matrices can not be multiplied')
         C = self.matrix.dot(B.matrix)
         return C
 
