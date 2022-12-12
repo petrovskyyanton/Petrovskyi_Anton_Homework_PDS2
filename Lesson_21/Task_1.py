@@ -11,6 +11,7 @@ class MatrixError(Exception):
     def __str__(self):
         return f'Something wrong: {self.message}'
 
+
 class Matrix:
     def __init__(self, lists):
         self.lists = lists
@@ -87,10 +88,12 @@ class Matrix:
         return self.matrix * number
 
     def multiple(self, B):
-        if len(self.matrix[0]) != len(B.matrix):
-            raise MatrixError('This matrices can not be multiplied')
-        C = self.matrix.dot(B.matrix)
-        return C
+        try:
+            C = self.matrix.dot(B.matrix)
+            return C
+        except Exception as ex:
+            if len(self.matrix[0]) != len(B.matrix):
+                raise MatrixError(f'{ex}. This matrices can not be multiplied')
 
     def transponse(self):
         return self.matrix.transpose()
@@ -98,12 +101,12 @@ class Matrix:
 
 m1 = [[3, 4, 5]]
 
-m2 = [[2, 7],
-      [9, 7]]
+m2 = [[2, 9],
+      [9, 7],
+      [4, 3]]
 
 m1 = Matrix(m1)
 m2 = Matrix(m2)
-
 
 print(m1.add(m2))
 print(m2.minus(m1))
