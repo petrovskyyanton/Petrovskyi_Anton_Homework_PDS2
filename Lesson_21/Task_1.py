@@ -99,11 +99,13 @@ class Matrix:
         return self.matrix.transpose()
 
 
-m1 = [[3, 4, 5]]
+m1 = [[1, 2, 3],
+      [3, 4, 5],
+      [5, 7, 9]]
 
-m2 = [[2, 9],
-      [9, 7],
-      [4, 3]]
+m2 = [[2, 9, 3],
+      [9, 7, 5],
+      [4, 3, 1]]
 
 m1 = Matrix(m1)
 m2 = Matrix(m2)
@@ -113,3 +115,12 @@ print(m2.minus(m1))
 print(m1.number_multiple(2))
 print(m1.multiple(m2))
 print(m2.transponse())
+
+m3 = [[3, 4, 5]]
+m4 = [[2],
+      [5],
+      [3]]
+m3 = Matrix(m3)
+m4 = Matrix(m4)
+print(m3.add(m4))
+print(m4.minus(m3))
