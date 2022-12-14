@@ -1,6 +1,5 @@
 import numpy as np
 
-
 class MatrixError(Exception):
     def __init__(self, *args):
         if args:
@@ -89,11 +88,13 @@ class Matrix:
 
     def multiple(self, B):
         try:
-            C = self.matrix.dot(B.matrix)
-            return C
+            if len(self.matrix[0]) == len(B.matrix):
+                C = self.matrix.dot(B.matrix)
+                return C
+            else:
+                raise MatrixError('This matrices can not be multiplied')
         except Exception as ex:
-            if len(self.matrix[0]) != len(B.matrix):
-                raise MatrixError(f'{ex}. This matrices can not be multiplied')
+            return ex
 
     def transponse(self):
         return self.matrix.transpose()
@@ -104,8 +105,7 @@ m1 = [[1, 2, 3],
       [5, 7, 9]]
 
 m2 = [[2, 9, 3],
-      [9, 7, 5],
-      [4, 3, 1]]
+      [9, 7, 5]]
 
 m1 = Matrix(m1)
 m2 = Matrix(m2)
