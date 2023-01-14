@@ -47,29 +47,47 @@ class Tree:
                 self.right = Tree(value)
 
     def insert_from_list(self, list_of_elements):
+        # if len(list_of_elements) % 2 == 0:
+        #     end = (len(list_of_elements) - 2) // 2
+        #     for i in range(end + 1):
+        #         start = self.id_node
+        #         value = list_of_elements[i]
+        #         if value is None:
+        #             continue
+        #         left = list_of_elements[2 * i + 1]
+        #         right = list_of_elements[2 * i + 2]
+        #
+        #         if left is not None:
+        #             if left > start:
+        #                 raise ValueError(f'{left} is greatest than {start}')
+        #         if right is not None:
+        #             if right < start:
+        #                 raise ValueError(f'{right} is less than {start}')
+        #         start = value
         if len(list_of_elements) % 2 == 0:
             raise ValueError(f'{list_of_elements} is invalid list')
-        end = (len(list_of_elements) - 3) // 2
-        for i in range(end + 1):
-            value = list_of_elements[i]
-            if value is None:
-                continue
-            left = list_of_elements[2 * i + 1]
-            right = list_of_elements[2 * i + 2]
-            if left is not None:
-                if left >= value:
-                    raise ValueError(f'{left} is greatest than {value}')
-            if right is not None:
-                if right <= value:
-                    raise ValueError(f'{right} is less than {value}')
+        if len(list_of_elements) % 2 != 0:
+            end = (len(list_of_elements) - 3) // 2
+            for i in range(end + 1):
+                value = list_of_elements[i]
+                if value is None:
+                    continue
+                left = list_of_elements[2 * i + 1]
+                right = list_of_elements[2 * i + 2]
+                if left is not None:
+                    if left > value:
+                        raise ValueError(f'{left} is greatest than {value}')
+                if right is not None:
+                    if right < value:
+                        raise ValueError(f'{right} is less than {value}')
         for i in list_of_elements:
             if i is None:
                 continue
             self.insert(i)
 
 
-example_1 = Tree()
-list_example_1 = [8, 3, 10, 1, 6, None, 14, None, None, 4, 7, None, None, 13, None]
+example_1 = Tree(8)
+list_example_1 = [3, 10, 1, 6, None, 14, None, None, 4, 7, None, None, 13, None]
 example_1.insert_from_list(list_example_1)
 list_example_2 = [10, 5, 15, 4, 6, 14, 20]
 example_2 = Tree()
