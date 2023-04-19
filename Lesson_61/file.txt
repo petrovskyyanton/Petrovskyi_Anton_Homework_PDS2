@@ -1,0 +1,90 @@
+#######################
+# General information #
+#######################
+
+PyMod Installer Bundle for linux, generated on 3/11/2017 at 11:36:54.
+Includes PyMod 2.0.8 source.
+For more information on PyMod and PyMod Installer Bundle: http://schubert.bio.uniroma1.it/pymod/documentation.html
+Or contact: giacomo.janson@uniroma1.it
+    
+#######################
+# General information #
+#######################
+
+PyMod Installer Bundle for linux, generated on 13/7/2016 at 18:19:17.
+Includes PyMod 2.0.0 source.
+For more information on PyMod and PyMod Installer Bundle visit: http://schubert.bio.uniroma1.it/pymod/documentation.html
+Or contact: giacomo.janson@uniroma1.it
+
+##########################
+# PyMod Installer Bundle #
+##########################
+
+The PyMod Installer Bundle is distributed in order to facilate the installation of PyMod and its
+components through its scripts. These scripts run inside PyMOL by using the 'Run->...' command on
+PyMOL external GUI window. Requires PyMOL version >= 0.99. Incentive and open source PyMOL builds
+are supported. Functional on 32/64bit PyMOL, on Linux, Windows and Mac OS.
+
+#########################
+# install_all.py script #
+#########################
+
+This install_all.py script can be used to unpack on your system (and to automatically configure them
+for use within PyMod) the following components:
+
+    - NumPy (http://www.numpy.org/) and Biopython (http://biopython.org/) libraries.
+    - the executables of these bioinformatics tools:
+          - ClustalW (http://www.clustal.org/clustal2/)
+            Clustal Omega (http://www.clustal.org/omega/)
+            MUSCLE (http://www.drive5.com/muscle/downloads.htm)
+            PSI-BLAST (ftp://ftp.ncbi.nlm.nih.gov/blast/executables/blast+/LATEST/)
+            PSIPRED (http://bioinfadmin.cs.ucl.ac.uk/downloads/psipred/)
+            ksdssp (https://www.cgl.ucsf.edu/Overview/software.html#ksdssp)
+    - the 'swissprot' and 'pdbaa' BLAST sequence databases (from ftp://ftp.ncbi.nlm.nih.gov/blast/db/)
+
+The install_all.py script can be run in these two situations:
+
+    1) Before installing PyMod, in order to install PyMod on your system along with its
+       dependencies, external tools and data files. The install_all.py script will:
+           - install PyMod in one of PyMOL plugins directories. Note that if you have more than one
+             PyMOL plugin directory, the installer will place PyMod files in the first plugin
+             directory with writing privileges it finds. In this way you will not be able to control
+             PyMod installation path.
+           - build a '.pymod' directory on your home folder and store its external tools
+             and data files in it. Once you start up PyMod inside PyMOL for the first time, PyMod
+             will move these files to its main folder (the 'PyMod directory' specified when running
+             PyMod for the first time) and automatically update its configuration file, so that the
+             external tools and data files unpacked by the installer can be used within the plugin.
+           - place in PyMOL Python libraries directory (usually the one containing the pmg_tk
+             directory) NumPy or Biopython, whenever these two packages are missing on your PyMOL.
+
+    2) Recommended: after having manually installed PyMod (for example by using PyMOL 'Plugin
+       Manager'), in order to install its missing dependencies, external tools and data files. The
+       install_all.py script will:
+           - unpack its external tools and data files in the '.pymod' directory in your
+             home folder and it will move these files to in the 'PyMod directory' and automatically
+             configure the PyMod configuration file. In this way, the next time you start PyMod,
+             the new components can readily be used by the plugin.
+           - install on your system the missing Python libraries just as in situation (1).
+       This mode is recommended, because by manually installing PyMod, you can decide its
+       installation directory.
+
+######################
+# get_information.py #
+######################
+
+This is an additional script shipped in the PyMod Installer Bundle which will not install anything
+on your system, but it will provide you with information about your PyMOL build (version,
+architecture, etc...) and the installation status of PyMod 2 and its components.
+
+The script will print a series of information in the output region of the PyMOL main window. You can
+scroll the output using the window scrollbar. Among the useful information which you might find,
+there is the architecture of your PyMOL build (listed in the 'PyMOL information' section of the
+output) and the installation status of the PyMod 2 components on your system (listed in the
+'Checking components installation state' section of the output).
+
+###################
+# pymod_files.zip #
+###################
+
+This zip file contains all the installation files for PyMod and its components.
